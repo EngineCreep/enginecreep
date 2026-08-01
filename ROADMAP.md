@@ -101,3 +101,20 @@ EngineCreep exists to organize that information into one structured, transparent
 EngineCreep is an independent project created by enthusiasts who believe that better information leads to better decisions.
 
 Every update, every new engine, and every improvement brings us one step closer to making engine research simple, transparent, and trustworthy for everyone.
+
+---
+
+## 📈 Current Progress
+
+- ✅ 241 engine research profiles
+- 🚗 25+ manufacturers covered
+- 📊 Reliability scoring
+- 🔧 Maintenance schedules
+- 💰 Repair cost estimates
+- 📉 Ownership cost analysis
+- ⚠️ Common failure database
+- 📚 Buying advice
+- 🔍 Engine comparison
+- 🌍 Available worldwide
+
+EngineCreep is actively expanding, with new engines and improvements released regularly.

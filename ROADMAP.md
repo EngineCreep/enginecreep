@@ -10,7 +10,7 @@ Our goal is to become the world's most trusted engine research database by makin
 
 This roadmap gives an overview of the features currently in development, planned improvements, and long-term goals. Priorities may change as the project grows and community feedback helps shape future updates.
 
-*Last updated: September 2026 (version 2.0).*
+*Last updated: September 2026 (version 2.2).*
 
 ---
 
@@ -20,12 +20,12 @@ With version 2.0, EngineCreep started again from zero.
 
 Every engine is now researched with a new pipeline and new sources, and nothing from the old catalogue was carried over. Each report is built the same way:
 
-- **New sources, strongest evidence first:** official recalls from NHTSA (US) and the RDW (Netherlands), NHTSA owner complaints, dated owner histories such as Bring a Trailer listings, owner forums, and Reddit communities.
+- **New sources, strongest evidence first:** official recalls from NHTSA (US) and the RDW (Netherlands), NHTSA owner complaints, UK MOT test records from the DVSA covering 138 million vehicles, dated owner histories such as Bring a Trailer listings, owner forums, and Reddit communities.
 - **A new pipeline:** every owner report is filtered, checked for which engine it is really about, grouped into known failure types, and confirmed only when independent sources agree.
 - **New grading:** the score is calculated by fixed rules that are the same for every engine and calibrated against reference engines with well-established records.
 - **Human review:** a person checks every engine before it is published.
 
-The catalogue restarts with **22 hand-reviewed BMW engines**. The 241 profiles from version 1.x were retired, and engines come back one by one as they pass the same research and review. The full method is on the site's methodology page.
+The catalogue restarted with **22 hand-reviewed BMW engines** and has grown to **29** since. The 241 profiles from version 1.x were retired, and engines come back one by one as they pass the same research and review. The full method is on the site's methodology page.
 
 ---
 
@@ -38,18 +38,18 @@ These features are actively being developed and are the highest priority.
 - Researching more engines from scratch with the new pipeline, beyond BMW.
 - Bringing back the engines from version 1.x, each one only after it passes the same review.
 - Covering the same engine in more cars, since one engine code can behave differently from car to car.
+- Letting searches set the order: engine codes people search for that we do not cover yet are counted, and the most wanted come first.
 
 ## Engine Research Improvements
 
 - Improving the reliability scoring methodology.
-- Adding UK MOT test data (DVSA) to engine reports for real-world mileage.
+- Showing real-world mileage from UK MOT test data (DVSA) on engine reports.
 - Adding manufacturer technical service bulletins.
 - Power output for every version of each engine.
 - Repair costs that reflect engine-out jobs and local labour rates.
 
 ## User Experience
 
-- Faster search experience.
 - Improved filtering and navigation.
 - Better comparison between engines.
 - Additional performance optimizations.
@@ -77,9 +77,11 @@ These are features we believe will significantly improve the research experience
 ## More Languages
 
 - More languages after English and German.
+- German versions of the buying guides.
 
 ## Community Features
 
+- Repair costs and real-world fuel figures sent in by owners, shown on each engine's report.
 - Community feedback on engine reliability.
 - Public status for reported corrections.
 
@@ -92,7 +94,22 @@ These are features we believe will significantly improve the research experience
 
 ---
 
-# ✅ Delivered in 2.0
+# ✅ Delivered
+
+## Version 2.2
+
+- Search by engine code, with a link for every search that can be bookmarked or shared.
+- "Share the bill" on every engine report: owners can send what a repair cost and at what mileage, or what their engine really uses on fuel.
+- Searches for engines we do not cover yet are counted, so the most wanted engines are added first.
+- Engine cards name the full car: series, chassis, facelift and trim.
+
+## Version 2.1
+
+- Seven more BMW engines: the N47 in five cars, the N52 and the N54.
+- Every page shows the final grade confirmed in review.
+- The site offers each page in your browser's language when a translation exists.
+
+## Version 2.0
 
 - New research pipeline and sources, with every engine researched from zero.
 - Human review of every engine before publication.
@@ -136,7 +153,7 @@ Every engine has its own strengths, weaknesses, maintenance requirements, and ow
 
 EngineCreep exists to organize that information into one structured, transparent, and easy-to-understand resource, helping buyers make informed decisions with confidence.
 
-That is why we would rather publish 22 engines we can stand behind than hundreds we cannot.
+That is why we would rather publish 29 engines we can stand behind than hundreds we cannot.
 
 ---
 
@@ -150,14 +167,15 @@ Every update, every new engine, and every improvement brings us one step closer 
 
 ## 📈 Current Progress
 
-- ✅ 22 engines researched from zero and reviewed by hand
-- 🚗 14 BMW engine families, each in a specific car
-- 📚 1,419 sources behind 168 confirmed issues
+- ✅ 29 engines researched from zero and reviewed by hand
+- 🚗 17 BMW engine families, each in a specific car
+- 📚 2,180 sources behind 278 confirmed issues
 - 📊 Evidence-based reliability scoring, calibrated against reference engines
 - ⚠️ Confirmed-issue database with known failure types
 - 💰 Typical repair price range for every failure type
 - 📋 Buying advice and a buying checklist for every engine
-- 🔍 Engine comparison and curated lists
+- 🔍 Search by engine code, engine comparison and curated lists
+- 🧾 Repair bills and fuel figures shared by owners
 - 📖 Public methodology
 - 🌍 Available in English and German
 

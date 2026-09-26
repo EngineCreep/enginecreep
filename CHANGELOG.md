@@ -6,6 +6,70 @@ The format is based on Keep a Changelog and follows Semantic Versioning.
 
 ---
 
+## [2.2.0] - 2026-09-26
+
+Search by engine code, a way for owners to send in their repair bills and fuel figures, and the full car name on every engine card.
+
+### Added
+
+- Engine code search at the top of the engine database. Type a code such as N47, EA888 or 1ZZ-FE and the list narrows as you type. Capitals, spaces and hyphens do not matter, a full type code from the engine itself finds its family (N47D20 finds the N47), and a make in front is understood (BMW N47).
+- Every search has its own address, such as `/engines/?q=n47`, so it can be bookmarked or shared.
+- "Had work done on yours? Share the bill." on every engine report. Owners can send what a repair cost, at what mileage, in which year and who did the work, or what the engine really uses on fuel. Each known issue links straight to the form with that issue filled in. Submissions go to a person, who checks them before anything is added to the data.
+- Searches for engine codes we do not cover yet are counted, so the engines people look for most can be added first.
+
+### Changed
+
+- Privacy policy updated for the new form and for search counting.
+
+### Fixed
+
+- Engine cards now name the full car: series, chassis, facelift and trim, such as "3 Series E90/E91/E92 LCI" or "5 Series F10/F11 · 520d", instead of only "3 Series" or "520d".
+- Trims keep their proper spelling on cards: 118d and M140i, not 118D and M140I.
+- The search address the home page gives to search engines now opens the engine database already filtered. The page used to ignore it.
+
+### Security
+
+- Search counting has its own rate limit of ten requests a minute per visitor, separate from the forms, and accepts only input shaped like an engine code.
+- Each visitor counts once per code per day. The check uses a code made from the IP address and a random value that changes daily. Both are deleted the next day, and the IP address itself is never stored.
+- Email alerts about popular searches are capped at ten a day.
+- The repair form has the same bot trap and rate limit as the other forms, and every value is checked again on the server, including sensible ranges for mileage, cost and year.
+
+### Infrastructure
+
+- New D1 tables for search counts.
+- Changed pages are reported to Bing, and through it to Yandex, Seznam, Naver and Yep, using IndexNow after each deploy.
+
+---
+
+## [2.1.0] - 2026-09-25
+
+Seven more BMW engines, and grades that match the review.
+
+### Added
+
+- Seven BMW engines: the N47 in five cars (1 Series F20 114d and 120d, 3 Series E90 LCI, 3 Series F30 and 5 Series F10 520d), the N52 in the 3 Series E90 328i and the N54 in the 3 Series E90 LCI 335i. Each has its verdict and buying advice in English and German.
+- Engine illustrations for the N47, N52 and N54.
+- A bar that offers a page in your browser's language when a translation exists. It never redirects, and it remembers your choice.
+
+### Changed
+
+- The catalogue now covers 29 BMW engines, with 2,180 sources behind 278 confirmed issues.
+- Every page now shows the final grade confirmed in review. Scores currently range from 38 to 92.
+- Copy edits across the site.
+- More space between the rows of the "When problems show up" chart.
+
+### Fixed
+
+- A large image in a guide no longer pushes the page sideways on phones.
+- German headings leave room for capital umlauts.
+
+### Infrastructure
+
+- Buying guides can be published per language, with the same rule as engine text: a translation that has fallen behind the English is not shown.
+- Data syncs refuse to publish English text that would leave a translation out of date.
+
+---
+
 ## [2.0.0] - 2026-09-23
 
 A ground-up rebuild. Every score now comes from a new evidence pipeline and is checked by a person before it is published. The catalogue restarts with 22 hand-reviewed BMW engines instead of 241 generated profiles, and the whole site is now also available in German.
@@ -17,6 +81,7 @@ A ground-up rebuild. Every score now comes from a new evidence pipeline and is c
 - New data sources, strongest evidence first:
   - Official recalls from NHTSA (US) and the RDW (Netherlands).
   - NHTSA owner complaints.
+  - UK MOT test records from the DVSA, covering 138 million vehicles. They show how far these engines really go and what they fail their annual test on. Testers never open the engine, so MOT records speak to mileage and wear, not to what failed inside.
   - Dated owner histories, such as Bring a Trailer listings.
   - Owner forums, including Bimmerpost, E90Post, BimmerForums, Motor-Talk and German and Russian BMW boards.
   - Reddit car and brand communities.
